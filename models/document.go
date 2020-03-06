@@ -11,7 +11,7 @@ type Document struct {
 	Number string `json:"number"`
 	Phone string `json:"phone"`
 	Description string `json:"description"`
-	UserId uint   `json:"user_id"` //The user that this contact belongs to
+	UserId uint   `json:"user_id"`
 }
 
 /*
