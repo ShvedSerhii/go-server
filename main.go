@@ -15,10 +15,10 @@ func main() {
 
 	router.HandleFunc("/api/user/new", controllers.CreateAccount).Methods("POST")
 	router.HandleFunc("/api/user/login", controllers.Authenticate).Methods("POST")
-	router.HandleFunc("/api/contacts", controllers.CreateContact).Methods("POST")
-	router.HandleFunc("/api/contacts", controllers.UpdateContact).Methods("PUT")
-	router.HandleFunc("/api/contacts", controllers.DeleteContact).Methods("DELETE")
-	router.HandleFunc("/api/me/contacts", controllers.GetContactsFor).Methods("GET") //  user/2/contacts
+	router.HandleFunc("/api/documents", controllers.CreateDocument).Methods("POST")
+	router.HandleFunc("/api/documents", controllers.UpdateDocument).Methods("PUT")
+	router.HandleFunc("/api/documents", controllers.DeleteDocument).Methods("DELETE")
+	router.HandleFunc("/api/me/documents", controllers.GetDocumentsFor).Methods("GET") //  user/2/contacts
 
 	router.Use(app.JwtAuthentication) //attach JWT auth middleware
 
